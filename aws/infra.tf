@@ -48,7 +48,7 @@ resource "aws_security_group" "rancher_sg_allowall" {
 
 # AWS EC2 instance for creating a single node RKE cluster and installing the Rancher server
 resource "aws_instance" "rancher_server" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.sles.id
   instance_type = var.instance_type
 
   key_name        = aws_key_pair.quickstart_key_pair.key_name
@@ -110,7 +110,7 @@ module "rancher_common" {
 
 # AWS EC2 instance for creating a single node workload cluster
 resource "aws_instance" "quickstart_node" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.sles.id
   instance_type = var.instance_type
 
   key_name        = aws_key_pair.quickstart_key_pair.key_name

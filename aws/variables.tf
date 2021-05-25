@@ -71,5 +71,5 @@ variable "rancher_server_admin_password" {
 
 # Local variables used to reduce repetition
 locals {
-  node_username = "ubuntu"
+  node_username = "ec2-user"
 }

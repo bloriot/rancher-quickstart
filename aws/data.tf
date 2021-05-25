@@ -3,14 +3,14 @@
 # AWS data
 # ----------------------------------------------------------
 
-# Use latest Ubuntu 18.04 AMI
-data "aws_ami" "ubuntu" {
+# Use latest SLES 15 SP2 AMI
+data "aws_ami" "sles" {
   most_recent = true
-  owners      = ["099720109477"] # Canonical
+  owners = ["013907871322"] # Amazon
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+    values = ["suse-sles-15-sp2-*-hvm-ssd-x86_64"]
   }
 
   filter {
