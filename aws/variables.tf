@@ -17,7 +17,7 @@ variable "aws_secret_key" {
 variable "aws_region" {
   type        = string
   description = "AWS region used for all resources"
-  default     = "us-east-1"
+  default     = "eu-west-3"
 }
 
 variable "prefix" {
@@ -35,19 +35,19 @@ variable "instance_type" {
 variable "docker_version" {
   type        = string
   description = "Docker version to install on nodes"
-  default     = "19.03"
+  default     = "20.10"
 }
 
 variable "rke_kubernetes_version" {
   type        = string
   description = "Kubernetes version to use for Rancher server RKE cluster"
-  default     = "v1.20.4-rancher1-1"
+  default     = "v1.20.8-rancher1-1"
 }
 
 variable "workload_kubernetes_version" {
   type        = string
   description = "Kubernetes version to use for managed workload cluster"
-  default     = "v1.19.8-rancher1-1"
+  default     = "v1.19.12-rancher1-1"
 }
 
 variable "cert_manager_version" {
@@ -59,7 +59,7 @@ variable "cert_manager_version" {
 variable "rancher_version" {
   type        = string
   description = "Rancher server version (format: v0.0.0)"
-  default     = "v2.5.7"
+  default     = "v2.5.9"
 }
 
 # Required
