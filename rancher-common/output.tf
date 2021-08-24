@@ -13,3 +13,7 @@ output "custom_cluster_windows_command" {
   value       = rancher2_cluster.quickstart_workload.cluster_registration_token.0.windows_node_command
   description = "Docker command used to add a windows node to the quickstart cluster"
 }
+
+output "rke_template_default_revision_id" {
+  value       = rancher2_cluster_template.tpl_test_rke.default_revision_id
+}

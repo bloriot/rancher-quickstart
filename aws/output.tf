@@ -9,3 +9,7 @@ output "rancher_node_ip" {
 output "workload_node_ip" {
   value = aws_instance.quickstart_node.public_ip
 }
+
+output "default_revision_id" {
+  value = module.rancher_common.rke_template_default_revision_id
+}
